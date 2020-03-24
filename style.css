@@ -1,3 +1,48 @@
-# CoffeMachine
-1234
+.coffee-machine {
+  border: 3px solid black;
+  margin-top: 100px;
+}
 
+ .coffee-list {
+   background-image: url("img/background.jpg");
+   background-size: cover;\
+ }
+ 
+ .coffee-item {
+   background: rgba(0,0,0,.7);
+   margin: 10px 0;
+   border-radius: calc(75px / 2);
+   cursor: pointer;
+ }
+ 
+ .col {
+   
+ }
+ 
+ .coffee-item span {
+   color: white;
+   margin-left: 25px;
+ }
+ 
+ .coffee-item img {
+   height: 75px;
+   background: white;
+   border-radius: 50%;
+   margin-left: -15px;
+ }
+ 
+ .coffee-item:hover {
+   background: rgba(50,50,50,.7);
+ }
+ 
+ .coffee-oper {
+   background: lightgrey;
+ }
+ 
+ .display {
+   background: lightgreen;
+   border: 3px solid darkgreen;
+   padding: 10px;
+   
+ }
+ 
