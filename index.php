@@ -16,19 +16,19 @@
       <div class="row coffee-machine">
         <div class="col-6 coffee-list">
           <div class="row flex-column p-3 h-100 justify-content-around">
-            <div class="coffee-item col" onclick="buyCoffee('Американо', 50)">
+            <div class="coffee-item col" onclick="buyCoffee('Американо', 50, this)">
               <img src="img/americano.png" alt="">
               <span>Американо - 50 руб.</span>
             </div>
-            <div class="coffee-item col" onclick="buyCoffee('Капучинно', 78)">
+            <div class="coffee-item col" onclick="buyCoffee('Капучинно', 78, this)">
               <img src="img/cappuccino.png" alt="">
               <span>Капучинно - 78 руб.й</span>
             </div>
-            <div class="coffee-item col" onclick="buyCoffee('Экспрессо', 21)">
+            <div class="coffee-item col" onclick="buyCoffee('Экспрессо', 21, this)">
               <img src="img/espresso.png" alt="">
               <span>"Экспрессо - 21 руб.</span>
             </div>
-            <div class="coffee-item col" onclick="buyCoffee('Латте', 115)">
+            <div class="coffee-item col" onclick="buyCoffee('Латте', 115, this)">
               <img src="img/latte.png" alt="">
               <span>Латтэ - 115 руб.</span>
             </div>
@@ -40,12 +40,12 @@
               <div class="display">
                 <p class="display-text">Выберите кофе</p>
                 <div class="progress">
-                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
                   </div>
                 </div>
               </div>
               <div class="coffee-cup">
-                <img src="img/americano.png" alt="Американо">
+                <img class = "d-none" src="img/americano.png" alt="Американо">
               </div>
             </div>
             <div class="col-6">
