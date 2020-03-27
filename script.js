@@ -7,6 +7,17 @@ let coffeeCup = document.querySelector(".coffee-cup img");
 
 let coffeeStatus = "waiting"; // "cooking", "ready"
 
+/*coffeeCup.onclick =  function() {
+  takeCoffee(); // можно передавать , но с this
+}*/
+coffeeCup.onclick = takeCoffee; // не можем послать парамметры функции
+
+//coffeeCup.addEventListener("click", takeCoffee, par1, par2, par3); // добавтьь функцию с памаметрами
+/*coffeeCup.addEventListener("click", () => {
+  takeCoffee();
+}*/
+//coffeeCup.addEventListener("click", buyCoffee, "Американо", 21);
+
 function buyCoffee(name, cost, elem) {
   if (coffeeStatus != "waiting") {
     return;
@@ -60,7 +71,20 @@ function cookCoffee(name, elem) {
   }, 100);
 }
 
+function takeCoffee() {
+  if (coffeeStatus != "ready") {
+    return;
+  }
+  coffeeStatus = "waiting";
+  coffeeCup.classList.add("d-none");
+  coffeeCup.style.cursor = "auto";
+  progressBar.style.width = "0%";
+  changeDisplayText("Выберите кофе");
+}
+
 function changeDisplayText(text) {
  //displayText.innerText = "<span>"+text+"</span>";
   displayText.innerHTML = "<span>"+text+"</span>";
 }
+
+
