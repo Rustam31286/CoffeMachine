@@ -87,4 +87,45 @@ function changeDisplayText(text) {
   displayText.innerHTML = "<span>"+text+"</span>";
 }
 
+//--------------------------------Drag'n'Drop--------
+let bills = document.querySelectorAll(".wallet img");
+for(let i = 0; i < bills.length; i++) {
+  bills[i].onmousedown = takeMoney;
+}
+
+function takeMoney(event) {  // возможно event как e
+  event.preventDefault(); // отключает присвоенные браузером Drug и drop
+  
+  let bill = this;
+  let billCost = bill.getAttribute("cost");
+  
+  bill.style.position = "absolute";
+  bill.style.transform = "rotate(90deg)";
+  
+  let billCoords = bill.getBoundingClientRect()
+  let billWidth = billCoords.width;
+  let billHeight = billCoords.height;
+  
+  bill.style.top = event.clientY - billWidth/2 + "px";
+  bill.style.left = event.clientX - billHeight/2 + "px";
+  
+  window.onmousemove = (event) => {
+    bill.style.top = event.clientY - billWidth/2 + "px";
+    bill.style.left = event.clientX - billHeight/2 + "px";
+  }
+  
+  bill.onmouseup = dropMoney;
+}
+
+function dropMoney() {
+  window.onmousemove = null;
+}
+
+
+
+
+
+
+
+
 
