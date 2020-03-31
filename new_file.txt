@@ -1,0 +1,75 @@
+// изменять стили элементов
+
+elem.style.opacity = "25%";
+elem.style.border-radius       => elem.style.borderRadius = "50%";
+// работа с классами
+
+elem.classList.add("d-none") // добавлять класс
+elem.classList.remove("d-none") // убрать класс
+elem.classList.toggle("d-none") // содержит ли (выводит true или false)
+
+// работа с атрибутами
+elem.getAttribute("src") // Возвращает значение атрибута
+elem.setAttribute("src", "img/coffee.png") // принимаем значение атрибута
+elem.hasAttribute("src") // содержит ли (выводит true или false)
+
+// планирование 
+
+let timeout = setTimeout(function() {}, 2000) // отрабатывает только один раз
+let timeout = setInterval(function() {}, 2000) // отрабатывает каждые 2 секунды пока не сбросят
+
+
+clearTimeout(timeout);
+clearInterval(interval);
+
+// функции - стрелки
+
+function () {}   ======================   ()=>{}
+()  => alert ("dfdf")   ====================== function () {return alert("dfdf")}
+// работа со внутреним сожержимым элементов
+let elem = document.querySelector("p");
+elem.innerText = "Новый текст" // вписать новый текст в тэг
+elem.innerHTML = "<span>Новый текст</span>; // вписать код HTML в элемент
+//querySelector
+
+    let childElem = elem.querySelector(".childElem");
+    
+    // следующий урок
+    
+    1. вписать событие в html
+    2. let elem = document.querySelector(".elem");
+    elem.onclick = someFunction;
+    
+    3. elem.addEventListener("click", someFunction);
+    elem.addEventListener("click", anotherFunction);
+    //---------------------------
+    elem.onclick = null;
+    elem.removeEventListener("click", someFunction);
+    
+    //----параметр event------
+    elem.onclick = someFunction;
+    
+    function someFunction(event) {
+    event.preventDefault() // сбрасывает события по умолчанию
+    event.clientX // положение курссора по оси X
+    event.clientY // положение курссора по оси Y
+    
+    
+    //querySelectorAll()
+    bills = document.querySelectorAll(".wallet img") ===> NodeList[img, img, img]
+    // как получить координаты элемента
+    let elem = document.querySelector(".elem");
+    let coords = elem.getBoundingClientReck();
+    
+    
+    coords.x
+    coords.y
+    coords.
+    coords.
+    coords.
+    coords.
+    coords.
+    
+    
+    
+    
